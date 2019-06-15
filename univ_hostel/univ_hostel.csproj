@@ -165,6 +165,9 @@
     <EmbeddedResource Include="Forms\Administrator\ViewStudent.resx">
       <DependentUpon>ViewStudent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base.resx">
+      <DependentUpon>Base.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Student\AddRequest.resx">
       <DependentUpon>AddRequest.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +216,12 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UnivHostelKeyboardControl\UnivHostelKeyboardControl.csproj">
+      <Project>{9BCFD2F6-E233-4C29-807A-66A46BDFADCC}</Project>
+      <Name>UnivHostelKeyboardControl</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

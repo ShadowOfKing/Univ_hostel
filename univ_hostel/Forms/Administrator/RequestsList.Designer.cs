@@ -47,7 +47,7 @@
 			this.bid_students.Name = "bid_students";
 			this.bid_students.ReadOnly = true;
 			this.bid_students.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.bid_students.Size = new System.Drawing.Size(800, 270);
+			this.bid_students.Size = new System.Drawing.Size(1006, 465);
 			this.bid_students.TabIndex = 0;
 			// 
 			// button1
@@ -56,9 +56,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.button1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button1.Location = new System.Drawing.Point(12, 367);
+			this.button1.Location = new System.Drawing.Point(12, 562);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(776, 58);
+			this.button1.Size = new System.Drawing.Size(982, 58);
 			this.button1.TabIndex = 3;
 			this.button1.Text = "Закрыть";
 			this.button1.UseVisualStyleBackColor = true;
@@ -70,9 +70,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.button2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button2.Location = new System.Drawing.Point(12, 287);
+			this.button2.Location = new System.Drawing.Point(12, 482);
 			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(776, 58);
+			this.button2.Size = new System.Drawing.Size(982, 58);
 			this.button2.TabIndex = 4;
 			this.button2.Text = "Открыть выбранного студента";
 			this.button2.UseVisualStyleBackColor = true;
@@ -82,7 +82,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(1006, 645);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.bid_students);

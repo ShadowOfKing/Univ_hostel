@@ -46,6 +46,14 @@ namespace univ_hostel.Forms.Student
 				input_phone.Text = student.PhoneNumber;
 				input_isBudged.Checked = student.IsBudget;
 			}
+			keyboard.AddControl(input_name);
+			keyboard.AddControl(input_lastname);
+			keyboard.AddControl(input_patronymic);
+			keyboard.AddControl(input_passportNumber);
+			keyboard.AddControl(input_passportSeria);
+			keyboard.AddControl(input_address);
+			keyboard.AddControl(input_email);
+			keyboard.AddControl(input_phone);
 		}
 
 		private void button_sendRequest_Click(object sender, EventArgs e)

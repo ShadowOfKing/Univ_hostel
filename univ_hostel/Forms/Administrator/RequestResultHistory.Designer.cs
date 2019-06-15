@@ -39,9 +39,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.button1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button1.Location = new System.Drawing.Point(12, 364);
+			this.button1.Location = new System.Drawing.Point(12, 559);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(776, 58);
+			this.button1.Size = new System.Drawing.Size(982, 58);
 			this.button1.TabIndex = 4;
 			this.button1.Text = "Закрыть";
 			this.button1.UseVisualStyleBackColor = true;
@@ -59,14 +59,14 @@
 			this.bi_logs.Location = new System.Drawing.Point(3, 1);
 			this.bi_logs.Name = "bi_logs";
 			this.bi_logs.ReadOnly = true;
-			this.bi_logs.Size = new System.Drawing.Size(792, 340);
+			this.bi_logs.Size = new System.Drawing.Size(998, 535);
 			this.bi_logs.TabIndex = 5;
 			// 
 			// RequestResultHistory
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(1006, 645);
 			this.Controls.Add(this.bi_logs);
 			this.Controls.Add(this.button1);
 			this.Name = "RequestResultHistory";

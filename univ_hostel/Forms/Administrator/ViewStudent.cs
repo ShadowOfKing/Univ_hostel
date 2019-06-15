@@ -49,6 +49,7 @@ namespace univ_hostel.Forms.Administrator
 				}
 				_student = student;
 			}
+			keyboard1.AddControl(input_comment);
 		}
 
 		private void button_sendRequest_Click(object sender, EventArgs e)
@@ -134,8 +135,7 @@ namespace univ_hostel.Forms.Administrator
                 Console.WriteLine("end");
             }
             MessageBox.Show("Документ сформирован");
-
-        }
+		}
 
         private void ReplaceWordStup(string stubToReplace, string text, Word.Document worddocument)
         {

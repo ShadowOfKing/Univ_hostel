@@ -40,6 +40,9 @@
 			this.label9 = new System.Windows.Forms.Label();
 			this.button_sendRequest = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
+			this.groupBox1 = new System.Windows.Forms.Panel();
+			this.keyboard1 = new UnivHostelKeyboardControl.Keyboard();
+			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// label11
@@ -47,7 +50,7 @@
 			this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.label11.AutoSize = true;
-			this.label11.Location = new System.Drawing.Point(24, 18);
+			this.label11.Location = new System.Drawing.Point(21, 22);
 			this.label11.MinimumSize = new System.Drawing.Size(139, 0);
 			this.label11.Name = "label11";
 			this.label11.Size = new System.Drawing.Size(139, 13);
@@ -60,9 +63,9 @@
 			this.input_faculty.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.input_faculty.FormattingEnabled = true;
-			this.input_faculty.Location = new System.Drawing.Point(208, 15);
+			this.input_faculty.Location = new System.Drawing.Point(205, 19);
 			this.input_faculty.Name = "input_faculty";
-			this.input_faculty.Size = new System.Drawing.Size(509, 21);
+			this.input_faculty.Size = new System.Drawing.Size(715, 21);
 			this.input_faculty.TabIndex = 31;
 			this.input_faculty.SelectedIndexChanged += new System.EventHandler(this.input_faculty_SelectedValueChanged);
 			// 
@@ -71,7 +74,7 @@
 			this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.label10.AutoSize = true;
-			this.label10.Location = new System.Drawing.Point(24, 53);
+			this.label10.Location = new System.Drawing.Point(21, 57);
 			this.label10.MinimumSize = new System.Drawing.Size(139, 0);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(139, 13);
@@ -84,18 +87,18 @@
 			this.input_group.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.input_group.FormattingEnabled = true;
-			this.input_group.Location = new System.Drawing.Point(208, 50);
+			this.input_group.Location = new System.Drawing.Point(205, 54);
 			this.input_group.Name = "input_group";
-			this.input_group.Size = new System.Drawing.Size(509, 21);
+			this.input_group.Size = new System.Drawing.Size(715, 21);
 			this.input_group.TabIndex = 29;
 			// 
 			// input_patronymic
 			// 
 			this.input_patronymic.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.input_patronymic.Location = new System.Drawing.Point(208, 155);
+			this.input_patronymic.Location = new System.Drawing.Point(205, 159);
 			this.input_patronymic.Name = "input_patronymic";
-			this.input_patronymic.Size = new System.Drawing.Size(509, 20);
+			this.input_patronymic.Size = new System.Drawing.Size(715, 20);
 			this.input_patronymic.TabIndex = 28;
 			// 
 			// label7
@@ -103,7 +106,7 @@
 			this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(24, 158);
+			this.label7.Location = new System.Drawing.Point(21, 162);
 			this.label7.MinimumSize = new System.Drawing.Size(139, 0);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(139, 13);
@@ -115,9 +118,9 @@
 			// 
 			this.input_name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.input_name.Location = new System.Drawing.Point(208, 120);
+			this.input_name.Location = new System.Drawing.Point(205, 124);
 			this.input_name.Name = "input_name";
-			this.input_name.Size = new System.Drawing.Size(509, 20);
+			this.input_name.Size = new System.Drawing.Size(715, 20);
 			this.input_name.TabIndex = 26;
 			// 
 			// label8
@@ -125,7 +128,7 @@
 			this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(24, 123);
+			this.label8.Location = new System.Drawing.Point(21, 127);
 			this.label8.MinimumSize = new System.Drawing.Size(139, 0);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(139, 13);
@@ -137,9 +140,9 @@
 			// 
 			this.input_lastname.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.input_lastname.Location = new System.Drawing.Point(208, 85);
+			this.input_lastname.Location = new System.Drawing.Point(205, 89);
 			this.input_lastname.Name = "input_lastname";
-			this.input_lastname.Size = new System.Drawing.Size(509, 20);
+			this.input_lastname.Size = new System.Drawing.Size(715, 20);
 			this.input_lastname.TabIndex = 24;
 			// 
 			// label9
@@ -147,7 +150,7 @@
 			this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.label9.AutoSize = true;
-			this.label9.Location = new System.Drawing.Point(24, 88);
+			this.label9.Location = new System.Drawing.Point(21, 92);
 			this.label9.MinimumSize = new System.Drawing.Size(139, 0);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(139, 13);
@@ -161,9 +164,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.button_sendRequest.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.button_sendRequest.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button_sendRequest.Location = new System.Drawing.Point(12, 289);
+			this.button_sendRequest.Location = new System.Drawing.Point(12, 484);
 			this.button_sendRequest.Name = "button_sendRequest";
-			this.button_sendRequest.Size = new System.Drawing.Size(776, 58);
+			this.button_sendRequest.Size = new System.Drawing.Size(982, 58);
 			this.button_sendRequest.TabIndex = 22;
 			this.button_sendRequest.Text = "Найти информацию";
 			this.button_sendRequest.UseVisualStyleBackColor = true;
@@ -175,35 +178,58 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.button1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button1.Location = new System.Drawing.Point(12, 369);
+			this.button1.Location = new System.Drawing.Point(12, 564);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(776, 58);
+			this.button1.Size = new System.Drawing.Size(982, 58);
 			this.button1.TabIndex = 33;
 			this.button1.Text = "Закрыть";
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
+			// groupBox1
+			// 
+			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.groupBox1.Controls.Add(this.input_faculty);
+			this.groupBox1.Controls.Add(this.label9);
+			this.groupBox1.Controls.Add(this.label11);
+			this.groupBox1.Controls.Add(this.input_lastname);
+			this.groupBox1.Controls.Add(this.label8);
+			this.groupBox1.Controls.Add(this.label10);
+			this.groupBox1.Controls.Add(this.input_name);
+			this.groupBox1.Controls.Add(this.input_group);
+			this.groupBox1.Controls.Add(this.label7);
+			this.groupBox1.Controls.Add(this.input_patronymic);
+			this.groupBox1.Location = new System.Drawing.Point(24, 12);
+			this.groupBox1.Name = "groupBox1";
+			this.groupBox1.Size = new System.Drawing.Size(956, 187);
+			this.groupBox1.TabIndex = 34;
+			this.groupBox1.TabStop = false;
+			// 
+			// keyboard1
+			// 
+			this.keyboard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.keyboard1.Location = new System.Drawing.Point(24, 205);
+			this.keyboard1.Name = "keyboard1";
+			this.keyboard1.Size = new System.Drawing.Size(956, 273);
+			this.keyboard1.TabIndex = 35;
+			// 
 			// FindInfo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(1006, 645);
+			this.Controls.Add(this.keyboard1);
+			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.button1);
-			this.Controls.Add(this.label11);
-			this.Controls.Add(this.input_faculty);
-			this.Controls.Add(this.label10);
-			this.Controls.Add(this.input_group);
-			this.Controls.Add(this.input_patronymic);
-			this.Controls.Add(this.label7);
-			this.Controls.Add(this.input_name);
-			this.Controls.Add(this.label8);
-			this.Controls.Add(this.input_lastname);
-			this.Controls.Add(this.label9);
 			this.Controls.Add(this.button_sendRequest);
 			this.Name = "FindInfo";
 			this.Text = "Поиск информации о студенте";
+			this.groupBox1.ResumeLayout(false);
+			this.groupBox1.PerformLayout();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 
@@ -221,5 +247,7 @@
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Button button_sendRequest;
 		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Panel groupBox1;
+		private UnivHostelKeyboardControl.Keyboard keyboard1;
 	}
 }

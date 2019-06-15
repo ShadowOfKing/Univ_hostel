@@ -22,6 +22,9 @@ namespace univ_hostel.Forms.Student
 				input_faculty.DataSource = db.Faculties.ToList();
 				input_faculty.DisplayMember = "Name";
 			}
+			keyboard1.AddControl(input_lastname);
+			keyboard1.AddControl(input_name);
+			keyboard1.AddControl(input_patronymic);
 		}
 
 

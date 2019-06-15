@@ -1,0 +1,8 @@
+C:\Work\My\univ_hostel\UnivHostelKeyboardControl\bin\Debug\UnivHostelKeyboardControl.dll
+C:\Work\My\univ_hostel\UnivHostelKeyboardControl\bin\Debug\UnivHostelKeyboardControl.pdb
+C:\Work\My\univ_hostel\UnivHostelKeyboardControl\obj\Debug\UnivHostelKeyboardControl.csprojAssemblyReference.cache
+C:\Work\My\univ_hostel\UnivHostelKeyboardControl\obj\Debug\UnivHostelKeyboardControl.csproj.GenerateResource.cache
+C:\Work\My\univ_hostel\UnivHostelKeyboardControl\obj\Debug\UnivHostelKeyboardControl.csproj.CoreCompileInputs.cache
+C:\Work\My\univ_hostel\UnivHostelKeyboardControl\obj\Debug\UnivHostelKeyboardControl.dll
+C:\Work\My\univ_hostel\UnivHostelKeyboardControl\obj\Debug\UnivHostelKeyboardControl.pdb
+C:\Work\My\univ_hostel\UnivHostelKeyboardControl\obj\Debug\UnivHostelKeyboardControl.Keyboard.resources

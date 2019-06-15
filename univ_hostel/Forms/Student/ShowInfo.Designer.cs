@@ -79,7 +79,7 @@
 			this.output_patronymic.Location = new System.Drawing.Point(208, 155);
 			this.output_patronymic.Name = "output_patronymic";
 			this.output_patronymic.ReadOnly = true;
-			this.output_patronymic.Size = new System.Drawing.Size(509, 20);
+			this.output_patronymic.Size = new System.Drawing.Size(715, 20);
 			this.output_patronymic.TabIndex = 28;
 			// 
 			// label7
@@ -102,7 +102,7 @@
 			this.output_name.Location = new System.Drawing.Point(208, 120);
 			this.output_name.Name = "output_name";
 			this.output_name.ReadOnly = true;
-			this.output_name.Size = new System.Drawing.Size(509, 20);
+			this.output_name.Size = new System.Drawing.Size(715, 20);
 			this.output_name.TabIndex = 26;
 			// 
 			// label8
@@ -125,7 +125,7 @@
 			this.output_lastname.Location = new System.Drawing.Point(208, 85);
 			this.output_lastname.Name = "output_lastname";
 			this.output_lastname.ReadOnly = true;
-			this.output_lastname.Size = new System.Drawing.Size(509, 20);
+			this.output_lastname.Size = new System.Drawing.Size(715, 20);
 			this.output_lastname.TabIndex = 24;
 			// 
 			// label9
@@ -147,9 +147,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.button_sendRequest.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.button_sendRequest.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button_sendRequest.Location = new System.Drawing.Point(12, 405);
+			this.button_sendRequest.Location = new System.Drawing.Point(12, 572);
 			this.button_sendRequest.Name = "button_sendRequest";
-			this.button_sendRequest.Size = new System.Drawing.Size(776, 58);
+			this.button_sendRequest.Size = new System.Drawing.Size(982, 58);
 			this.button_sendRequest.TabIndex = 22;
 			this.button_sendRequest.Text = "Закрыть";
 			this.button_sendRequest.UseVisualStyleBackColor = true;
@@ -162,7 +162,7 @@
 			this.output_status.Location = new System.Drawing.Point(208, 193);
 			this.output_status.Name = "output_status";
 			this.output_status.ReadOnly = true;
-			this.output_status.Size = new System.Drawing.Size(509, 20);
+			this.output_status.Size = new System.Drawing.Size(715, 20);
 			this.output_status.TabIndex = 34;
 			// 
 			// label1
@@ -185,7 +185,7 @@
 			this.output_group.Location = new System.Drawing.Point(208, 50);
 			this.output_group.Name = "output_group";
 			this.output_group.ReadOnly = true;
-			this.output_group.Size = new System.Drawing.Size(509, 20);
+			this.output_group.Size = new System.Drawing.Size(715, 20);
 			this.output_group.TabIndex = 35;
 			// 
 			// output_faculty
@@ -195,7 +195,7 @@
 			this.output_faculty.Location = new System.Drawing.Point(208, 18);
 			this.output_faculty.Name = "output_faculty";
 			this.output_faculty.ReadOnly = true;
-			this.output_faculty.Size = new System.Drawing.Size(509, 20);
+			this.output_faculty.Size = new System.Drawing.Size(715, 20);
 			this.output_faculty.TabIndex = 36;
 			// 
 			// label2
@@ -213,10 +213,12 @@
 			// 
 			// output_comment
 			// 
+			this.output_comment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.output_comment.Location = new System.Drawing.Point(208, 227);
 			this.output_comment.Name = "output_comment";
 			this.output_comment.ReadOnly = true;
-			this.output_comment.Size = new System.Drawing.Size(509, 63);
+			this.output_comment.Size = new System.Drawing.Size(715, 63);
 			this.output_comment.TabIndex = 38;
 			this.output_comment.Text = "";
 			// 
@@ -226,9 +228,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.button_resend.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.button_resend.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button_resend.Location = new System.Drawing.Point(12, 326);
+			this.button_resend.Location = new System.Drawing.Point(12, 493);
 			this.button_resend.Name = "button_resend";
-			this.button_resend.Size = new System.Drawing.Size(776, 58);
+			this.button_resend.Size = new System.Drawing.Size(982, 58);
 			this.button_resend.TabIndex = 39;
 			this.button_resend.Text = "Переотправить данные";
 			this.button_resend.UseVisualStyleBackColor = true;
@@ -238,7 +240,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 478);
+			this.ClientSize = new System.Drawing.Size(1006, 645);
 			this.Controls.Add(this.button_resend);
 			this.Controls.Add(this.output_comment);
 			this.Controls.Add(this.label2);

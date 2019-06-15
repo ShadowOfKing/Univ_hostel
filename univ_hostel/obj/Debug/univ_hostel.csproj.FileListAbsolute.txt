@@ -85,3 +85,6 @@ C:\Users\ISKANDER\Desktop\lab4i\univ_hostel\univ_hostel\obj\Debug\univ_hostel.cs
 C:\Users\ISKANDER\Desktop\lab4i\univ_hostel\univ_hostel\obj\Debug\univ_hostel.csproj.CopyComplete
 C:\Users\ISKANDER\Desktop\lab4i\univ_hostel\univ_hostel\obj\Debug\univ_hostel.exe
 C:\Users\ISKANDER\Desktop\lab4i\univ_hostel\univ_hostel\obj\Debug\univ_hostel.pdb
+C:\Work\My\univ_hostel\univ_hostel\bin\Debug\UnivHostelKeyboardControl.dll
+C:\Work\My\univ_hostel\univ_hostel\bin\Debug\UnivHostelKeyboardControl.pdb
+C:\Work\My\univ_hostel\univ_hostel\obj\Debug\univ_hostel.Forms.Base.resources

@@ -31,6 +31,8 @@
 			this.button_sendRequest = new System.Windows.Forms.Button();
 			this.container_tabs = new System.Windows.Forms.TabControl();
 			this.tab_common = new System.Windows.Forms.TabPage();
+			this.input_isBudged = new System.Windows.Forms.CheckBox();
+			this.label6 = new System.Windows.Forms.Label();
 			this.input_birthday = new System.Windows.Forms.DateTimePicker();
 			this.label12 = new System.Windows.Forms.Label();
 			this.label11 = new System.Windows.Forms.Label();
@@ -58,8 +60,7 @@
 			this.input_address = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
-			this.label6 = new System.Windows.Forms.Label();
-			this.input_isBudged = new System.Windows.Forms.CheckBox();
+			this.keyboard = new UnivHostelKeyboardControl.Keyboard();
 			this.container_tabs.SuspendLayout();
 			this.tab_common.SuspendLayout();
 			this.tab_private.SuspendLayout();
@@ -72,9 +73,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.button_sendRequest.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.button_sendRequest.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button_sendRequest.Location = new System.Drawing.Point(12, 301);
+			this.button_sendRequest.Location = new System.Drawing.Point(12, 511);
 			this.button_sendRequest.Name = "button_sendRequest";
-			this.button_sendRequest.Size = new System.Drawing.Size(776, 58);
+			this.button_sendRequest.Size = new System.Drawing.Size(982, 58);
 			this.button_sendRequest.TabIndex = 2;
 			this.button_sendRequest.Text = "Отправить заявку";
 			this.button_sendRequest.UseVisualStyleBackColor = true;
@@ -91,7 +92,7 @@
 			this.container_tabs.Location = new System.Drawing.Point(1, 0);
 			this.container_tabs.Name = "container_tabs";
 			this.container_tabs.SelectedIndex = 0;
-			this.container_tabs.Size = new System.Drawing.Size(807, 277);
+			this.container_tabs.Size = new System.Drawing.Size(1013, 275);
 			this.container_tabs.TabIndex = 0;
 			// 
 			// tab_common
@@ -113,10 +114,32 @@
 			this.tab_common.Location = new System.Drawing.Point(4, 22);
 			this.tab_common.Name = "tab_common";
 			this.tab_common.Padding = new System.Windows.Forms.Padding(3);
-			this.tab_common.Size = new System.Drawing.Size(799, 251);
+			this.tab_common.Size = new System.Drawing.Size(1005, 249);
 			this.tab_common.TabIndex = 0;
 			this.tab_common.Text = "Общее";
 			this.tab_common.UseVisualStyleBackColor = true;
+			// 
+			// input_isBudged
+			// 
+			this.input_isBudged.AutoSize = true;
+			this.input_isBudged.Location = new System.Drawing.Point(212, 85);
+			this.input_isBudged.Name = "input_isBudged";
+			this.input_isBudged.Size = new System.Drawing.Size(15, 14);
+			this.input_isBudged.TabIndex = 25;
+			this.input_isBudged.UseVisualStyleBackColor = true;
+			// 
+			// label6
+			// 
+			this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.label6.AutoSize = true;
+			this.label6.Location = new System.Drawing.Point(28, 85);
+			this.label6.MinimumSize = new System.Drawing.Size(139, 0);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(139, 13);
+			this.label6.TabIndex = 24;
+			this.label6.Text = "Бюджетное обучение";
+			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// input_birthday
 			// 
@@ -124,7 +147,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.input_birthday.Location = new System.Drawing.Point(212, 222);
 			this.input_birthday.Name = "input_birthday";
-			this.input_birthday.Size = new System.Drawing.Size(509, 20);
+			this.input_birthday.Size = new System.Drawing.Size(715, 20);
 			this.input_birthday.TabIndex = 23;
 			// 
 			// label12
@@ -160,7 +183,7 @@
 			this.input_faculty.FormattingEnabled = true;
 			this.input_faculty.Location = new System.Drawing.Point(212, 18);
 			this.input_faculty.Name = "input_faculty";
-			this.input_faculty.Size = new System.Drawing.Size(509, 21);
+			this.input_faculty.Size = new System.Drawing.Size(715, 21);
 			this.input_faculty.TabIndex = 20;
 			this.input_faculty.SelectedValueChanged += new System.EventHandler(this.input_faculty_SelectedValueChanged);
 			// 
@@ -184,7 +207,7 @@
 			this.input_group.FormattingEnabled = true;
 			this.input_group.Location = new System.Drawing.Point(212, 53);
 			this.input_group.Name = "input_group";
-			this.input_group.Size = new System.Drawing.Size(509, 21);
+			this.input_group.Size = new System.Drawing.Size(715, 21);
 			this.input_group.TabIndex = 18;
 			// 
 			// input_patronymic
@@ -193,7 +216,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.input_patronymic.Location = new System.Drawing.Point(212, 186);
 			this.input_patronymic.Name = "input_patronymic";
-			this.input_patronymic.Size = new System.Drawing.Size(509, 20);
+			this.input_patronymic.Size = new System.Drawing.Size(715, 20);
 			this.input_patronymic.TabIndex = 17;
 			// 
 			// label7
@@ -215,7 +238,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.input_name.Location = new System.Drawing.Point(212, 151);
 			this.input_name.Name = "input_name";
-			this.input_name.Size = new System.Drawing.Size(509, 20);
+			this.input_name.Size = new System.Drawing.Size(715, 20);
 			this.input_name.TabIndex = 15;
 			// 
 			// label8
@@ -237,7 +260,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.input_lastname.Location = new System.Drawing.Point(212, 116);
 			this.input_lastname.Name = "input_lastname";
-			this.input_lastname.Size = new System.Drawing.Size(509, 20);
+			this.input_lastname.Size = new System.Drawing.Size(715, 20);
 			this.input_lastname.TabIndex = 13;
 			// 
 			// label9
@@ -264,7 +287,7 @@
 			this.tab_private.Location = new System.Drawing.Point(4, 22);
 			this.tab_private.Name = "tab_private";
 			this.tab_private.Padding = new System.Windows.Forms.Padding(3);
-			this.tab_private.Size = new System.Drawing.Size(799, 251);
+			this.tab_private.Size = new System.Drawing.Size(1019, 269);
 			this.tab_private.TabIndex = 1;
 			this.tab_private.Text = "Личные данные";
 			this.tab_private.UseVisualStyleBackColor = true;
@@ -276,7 +299,7 @@
 			this.input_passportNumber.Location = new System.Drawing.Point(212, 88);
 			this.input_passportNumber.Mask = "999999";
 			this.input_passportNumber.Name = "input_passportNumber";
-			this.input_passportNumber.Size = new System.Drawing.Size(509, 20);
+			this.input_passportNumber.Size = new System.Drawing.Size(729, 20);
 			this.input_passportNumber.TabIndex = 13;
 			// 
 			// label13
@@ -299,7 +322,7 @@
 			this.input_passportSeria.Location = new System.Drawing.Point(212, 53);
 			this.input_passportSeria.Mask = "9999";
 			this.input_passportSeria.Name = "input_passportSeria";
-			this.input_passportSeria.Size = new System.Drawing.Size(509, 20);
+			this.input_passportSeria.Size = new System.Drawing.Size(729, 20);
 			this.input_passportSeria.TabIndex = 11;
 			// 
 			// label4
@@ -322,7 +345,7 @@
 			this.input_TIN.Location = new System.Drawing.Point(212, 18);
 			this.input_TIN.Mask = "999999999999";
 			this.input_TIN.Name = "input_TIN";
-			this.input_TIN.Size = new System.Drawing.Size(509, 20);
+			this.input_TIN.Size = new System.Drawing.Size(729, 20);
 			this.input_TIN.TabIndex = 9;
 			// 
 			// label5
@@ -349,7 +372,7 @@
 			this.tab_contact.Location = new System.Drawing.Point(4, 22);
 			this.tab_contact.Name = "tab_contact";
 			this.tab_contact.Padding = new System.Windows.Forms.Padding(3);
-			this.tab_contact.Size = new System.Drawing.Size(799, 251);
+			this.tab_contact.Size = new System.Drawing.Size(1019, 269);
 			this.tab_contact.TabIndex = 2;
 			this.tab_contact.Text = "Контактные данные";
 			this.tab_contact.UseVisualStyleBackColor = true;
@@ -360,7 +383,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.input_email.Location = new System.Drawing.Point(212, 88);
 			this.input_email.Name = "input_email";
-			this.input_email.Size = new System.Drawing.Size(509, 20);
+			this.input_email.Size = new System.Drawing.Size(729, 20);
 			this.input_email.TabIndex = 5;
 			// 
 			// label3
@@ -383,7 +406,7 @@
 			this.input_phone.Location = new System.Drawing.Point(212, 53);
 			this.input_phone.Mask = "+9 (999) 000-0000";
 			this.input_phone.Name = "input_phone";
-			this.input_phone.Size = new System.Drawing.Size(509, 20);
+			this.input_phone.Size = new System.Drawing.Size(729, 20);
 			this.input_phone.TabIndex = 3;
 			// 
 			// label2
@@ -405,7 +428,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.input_address.Location = new System.Drawing.Point(212, 18);
 			this.input_address.Name = "input_address";
-			this.input_address.Size = new System.Drawing.Size(509, 20);
+			this.input_address.Size = new System.Drawing.Size(729, 20);
 			this.input_address.TabIndex = 1;
 			// 
 			// label1
@@ -427,41 +450,31 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.button1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button1.Location = new System.Drawing.Point(12, 380);
+			this.button1.Location = new System.Drawing.Point(12, 575);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(776, 58);
+			this.button1.Size = new System.Drawing.Size(982, 58);
 			this.button1.TabIndex = 3;
 			this.button1.Text = "Закрыть";
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
-			// label6
+			// keyboard
 			// 
-			this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.keyboard.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(28, 85);
-			this.label6.MinimumSize = new System.Drawing.Size(139, 0);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(139, 13);
-			this.label6.TabIndex = 24;
-			this.label6.Text = "Бюджетное обучение";
-			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// input_isBudged
-			// 
-			this.input_isBudged.AutoSize = true;
-			this.input_isBudged.Location = new System.Drawing.Point(212, 85);
-			this.input_isBudged.Name = "input_isBudged";
-			this.input_isBudged.Size = new System.Drawing.Size(15, 14);
-			this.input_isBudged.TabIndex = 25;
-			this.input_isBudged.UseVisualStyleBackColor = true;
+			this.keyboard.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.keyboard.Location = new System.Drawing.Point(12, 281);
+			this.keyboard.Name = "keyboard";
+			this.keyboard.Size = new System.Drawing.Size(982, 224);
+			this.keyboard.TabIndex = 4;
 			// 
 			// AddRequest
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(1006, 645);
+			this.Controls.Add(this.keyboard);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.button_sendRequest);
 			this.Controls.Add(this.container_tabs);
@@ -512,5 +525,6 @@
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.CheckBox input_isBudged;
 		private System.Windows.Forms.Label label6;
+		private UnivHostelKeyboardControl.Keyboard keyboard;
 	}
 }
