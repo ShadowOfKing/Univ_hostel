@@ -29,7 +29,7 @@ namespace univ_hostel.Forms.Administrator
 					.Select(r => new { 
 						r.Comment,
 						Date = r.Date.ToString("dd.MM.yyyy mm:hh:ss"), 
-						Status = RequestHelper.GetStatusName(s.Status) 
+						Status = RequestHelper.GetStatusName(r.Status) 
 					})
 					.ToList();
 				bi_logs.DataSource = logs;

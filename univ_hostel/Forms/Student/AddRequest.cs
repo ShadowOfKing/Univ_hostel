@@ -44,64 +44,72 @@ namespace univ_hostel.Forms.Student
 				input_address.Text = student.Address;
 				input_email.Text = student.Email;
 				input_phone.Text = student.PhoneNumber;
+				input_isBudged.Checked = student.IsBudget;
 			}
 		}
 
 		private void button_sendRequest_Click(object sender, EventArgs e)
 		{
-			var student = new Models.Student()
+			try
 			{
-				Address = input_address.Text,
-				Birthday = input_birthday.Value,
-				Email = input_email.Text,
-				Lastname = input_lastname.Text,
-				Name = input_name.Text,
-				PassportNumber = input_passportNumber.Text,
-				PassportSeria = input_passportSeria.Text,
-				Patronymic = input_patronymic.Text,
-				PhoneNumber = input_phone.Text,
-				TIN = input_TIN.Text
-			};
-			using (var db = new DefaultDbContext())
-			{
-				student.GroupId = ((Group)input_group.SelectedValue).Id;
-				if (!studentId.HasValue)
+				var student = new Models.Student()
 				{
-					var found = db.Students.Where(s =>
-					s.GroupId == student.GroupId
-					&& s.Name == student.Name
-					&& s.Lastname == student.Lastname
-					&& s.Patronymic == student.Patronymic
-				).SingleOrDefault();
-					if (found != null)
+					Address = input_address.Text,
+					Birthday = input_birthday.Value,
+					Email = input_email.Text,
+					Lastname = input_lastname.Text,
+					Name = input_name.Text,
+					PassportNumber = input_passportNumber.Text,
+					PassportSeria = input_passportSeria.Text,
+					Patronymic = input_patronymic.Text,
+					PhoneNumber = input_phone.Text,
+					TIN = input_TIN.Text,
+					IsBudget = input_isBudged.Checked
+				};
+				using (var db = new DefaultDbContext())
+				{
+					student.GroupId = ((Group)input_group.SelectedValue).Id;
+					if (!studentId.HasValue)
 					{
-						var result = MessageBox.Show("Студент с данными Ф.И.О. в данной группе уже существует. Хотите посмотреть информацию о нём?", "Ошибка. Студент уже существует.", MessageBoxButtons.YesNo, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-						if (result == DialogResult.Yes)
+						var found = db.Students.Where(s =>
+						s.GroupId == student.GroupId
+						&& s.Name == student.Name
+						&& s.Lastname == student.Lastname
+						&& s.Patronymic == student.Patronymic
+					).SingleOrDefault();
+						if (found != null)
 						{
-							new ShowInfo(this, found).Show();
-							CorrectClose();
+							var result = MessageBox.Show("Студент с данными Ф.И.О. в данной группе уже существует. Хотите посмотреть информацию о нём?", "Ошибка. Студент уже существует.", MessageBoxButtons.YesNo, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+							if (result == DialogResult.Yes)
+							{
+								new ShowInfo(this, found).Show();
+								CorrectClose();
+							}
+							return;
 						}
-						return;
+						else
+						{
+							db.Students.Add(student);
+						}
 					}
 					else
 					{
-						db.Students.Add(student);
+						student.Id = studentId.Value;
+						db.Entry(student).State = EntityState.Modified;
+						var request = new RequestResult
+						{
+							Date = DateTime.Now,
+							Status = RequestStatus.InWork,
+							StudentId = student.Id,
+							Comment = $"Студент обновил данные"
+						};
+						db.RequestStatuses.Add(request);
 					}
+					db.SaveChanges();
 				}
-				else
-				{
-					student.Id = studentId.Value;
-					db.Entry(student).State = EntityState.Modified;
-					var request = new RequestResult
-					{
-						Date = DateTime.Now,
-						Status = RequestStatus.InWork,
-						StudentId = student.Id,
-						Comment = $"Студент обновил данные"
-					};
-					db.RequestStatuses.Add(request);
-				}
-				db.SaveChanges();
+			} catch (Exception ex)
+			{
+				MessageBox.Show("При отправке заявки произошла ошибка. \n" + ex.Message);
 			}
 			MessageBox.Show("Заявка успешно отправлена");
 			new Home(this).Show();
@@ -112,10 +120,11 @@ namespace univ_hostel.Forms.Student
 		{
 			using (var db = new DefaultDbContext())
 			{
+				var id = ((Faculty)input_faculty.SelectedValue)?.Id;
 				input_group.DataSource = db.Groups
 					.Include(g => g.Speciality)
 					.Include(g => g.Speciality.Faculty)
-					.Where(g => g.Speciality.Faculty.Id == ((Faculty)input_faculty.SelectedValue).Id)
+					.Where(g => g.Speciality.Faculty.Id == id)
 					.ToList();
 				input_group.DisplayMember = "Name";
 			}

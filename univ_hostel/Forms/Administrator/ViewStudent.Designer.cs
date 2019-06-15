@@ -64,6 +64,8 @@
 			this.label14 = new System.Windows.Forms.Label();
 			this.input_comment = new System.Windows.Forms.RichTextBox();
 			this.button3 = new System.Windows.Forms.Button();
+			this.output_isBudged = new System.Windows.Forms.CheckBox();
+			this.label15 = new System.Windows.Forms.Label();
 			this.container_tabs.SuspendLayout();
 			this.tab_common.SuspendLayout();
 			this.tab_private.SuspendLayout();
@@ -90,7 +92,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.button_sendRequest.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.button_sendRequest.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button_sendRequest.Location = new System.Drawing.Point(8, 470);
+			this.button_sendRequest.Location = new System.Drawing.Point(8, 485);
 			this.button_sendRequest.Name = "button_sendRequest";
 			this.button_sendRequest.Size = new System.Drawing.Size(776, 58);
 			this.button_sendRequest.TabIndex = 5;
@@ -109,11 +111,13 @@
 			this.container_tabs.Location = new System.Drawing.Point(-3, 6);
 			this.container_tabs.Name = "container_tabs";
 			this.container_tabs.SelectedIndex = 0;
-			this.container_tabs.Size = new System.Drawing.Size(807, 255);
+			this.container_tabs.Size = new System.Drawing.Size(807, 287);
 			this.container_tabs.TabIndex = 4;
 			// 
 			// tab_common
 			// 
+			this.tab_common.Controls.Add(this.output_isBudged);
+			this.tab_common.Controls.Add(this.label15);
 			this.tab_common.Controls.Add(this.label12);
 			this.tab_common.Controls.Add(this.label11);
 			this.tab_common.Controls.Add(this.label10);
@@ -129,7 +133,7 @@
 			this.tab_common.Location = new System.Drawing.Point(4, 22);
 			this.tab_common.Name = "tab_common";
 			this.tab_common.Padding = new System.Windows.Forms.Padding(3);
-			this.tab_common.Size = new System.Drawing.Size(799, 229);
+			this.tab_common.Size = new System.Drawing.Size(799, 261);
 			this.tab_common.TabIndex = 0;
 			this.tab_common.Text = "Общее";
 			this.tab_common.UseVisualStyleBackColor = true;
@@ -371,7 +375,7 @@
 			this.tab_contact.Location = new System.Drawing.Point(4, 22);
 			this.tab_contact.Name = "tab_contact";
 			this.tab_contact.Padding = new System.Windows.Forms.Padding(3);
-			this.tab_contact.Size = new System.Drawing.Size(799, 229);
+			this.tab_contact.Size = new System.Drawing.Size(799, 261);
 			this.tab_contact.TabIndex = 2;
 			this.tab_contact.Text = "Контактные данные";
 			this.tab_contact.UseVisualStyleBackColor = true;
@@ -452,7 +456,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.button2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button2.Location = new System.Drawing.Point(8, 397);
+			this.button2.Location = new System.Drawing.Point(8, 421);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(776, 58);
 			this.button2.TabIndex = 7;
@@ -465,7 +469,7 @@
 			this.input_status.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.input_status.FormattingEnabled = true;
-			this.input_status.Location = new System.Drawing.Point(213, 267);
+			this.input_status.Location = new System.Drawing.Point(213, 302);
 			this.input_status.Name = "input_status";
 			this.input_status.Size = new System.Drawing.Size(427, 21);
 			this.input_status.TabIndex = 24;
@@ -475,7 +479,7 @@
 			this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(29, 270);
+			this.label6.Location = new System.Drawing.Point(29, 305);
 			this.label6.MinimumSize = new System.Drawing.Size(139, 0);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(139, 13);
@@ -488,7 +492,7 @@
 			this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.label14.AutoSize = true;
-			this.label14.Location = new System.Drawing.Point(29, 302);
+			this.label14.Location = new System.Drawing.Point(29, 337);
 			this.label14.MinimumSize = new System.Drawing.Size(139, 0);
 			this.label14.Name = "label14";
 			this.label14.Size = new System.Drawing.Size(139, 13);
@@ -500,7 +504,7 @@
 			// 
 			this.input_comment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.input_comment.Location = new System.Drawing.Point(213, 302);
+			this.input_comment.Location = new System.Drawing.Point(213, 337);
 			this.input_comment.Name = "input_comment";
 			this.input_comment.Size = new System.Drawing.Size(427, 78);
 			this.input_comment.TabIndex = 26;
@@ -510,13 +514,36 @@
 			// 
 			this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button3.Location = new System.Drawing.Point(646, 264);
+			this.button3.Location = new System.Drawing.Point(646, 299);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(138, 116);
 			this.button3.TabIndex = 27;
 			this.button3.Text = "Посмотреть историю изменения статуса";
 			this.button3.UseVisualStyleBackColor = true;
 			this.button3.Click += new System.EventHandler(this.button3_Click);
+			// 
+			// output_isBudged
+			// 
+			this.output_isBudged.AutoSize = true;
+			this.output_isBudged.Location = new System.Drawing.Point(212, 230);
+			this.output_isBudged.Name = "output_isBudged";
+			this.output_isBudged.Size = new System.Drawing.Size(15, 14);
+			this.output_isBudged.TabIndex = 29;
+			this.output_isBudged.UseVisualStyleBackColor = true;
+			this.output_isBudged.Enabled = false;
+			// 
+			// label15
+			// 
+			this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.label15.AutoSize = true;
+			this.label15.Location = new System.Drawing.Point(28, 230);
+			this.label15.MinimumSize = new System.Drawing.Size(139, 0);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(139, 13);
+			this.label15.TabIndex = 28;
+			this.label15.Text = "Бюджетное обучение";
+			this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// ViewStudent
 			// 
@@ -584,5 +611,7 @@
 		private System.Windows.Forms.Label label14;
 		private System.Windows.Forms.RichTextBox input_comment;
 		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.CheckBox output_isBudged;
+		private System.Windows.Forms.Label label15;
 	}
 }

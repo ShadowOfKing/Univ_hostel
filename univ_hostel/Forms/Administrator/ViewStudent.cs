@@ -41,6 +41,7 @@ namespace univ_hostel.Forms.Administrator
 				output_address.Text = student.Address;
 				output_email.Text = student.Email;
 				output_phone.Text = student.PhoneNumber;
+				output_isBudged.Checked = student.IsBudget;
 				var request = db.RequestStatuses.Where(r => r.StudentId == studentId).OrderByDescending(r => r.Date).FirstOrDefault();
 				if (request != null) {
 					input_comment.Text = request.Comment;

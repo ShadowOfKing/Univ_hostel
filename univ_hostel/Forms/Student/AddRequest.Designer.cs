@@ -58,6 +58,8 @@
 			this.input_address = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
+			this.label6 = new System.Windows.Forms.Label();
+			this.input_isBudged = new System.Windows.Forms.CheckBox();
 			this.container_tabs.SuspendLayout();
 			this.tab_common.SuspendLayout();
 			this.tab_private.SuspendLayout();
@@ -94,6 +96,8 @@
 			// 
 			// tab_common
 			// 
+			this.tab_common.Controls.Add(this.input_isBudged);
+			this.tab_common.Controls.Add(this.label6);
 			this.tab_common.Controls.Add(this.input_birthday);
 			this.tab_common.Controls.Add(this.label12);
 			this.tab_common.Controls.Add(this.label11);
@@ -118,7 +122,7 @@
 			// 
 			this.input_birthday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.input_birthday.Location = new System.Drawing.Point(212, 194);
+			this.input_birthday.Location = new System.Drawing.Point(212, 222);
 			this.input_birthday.Name = "input_birthday";
 			this.input_birthday.Size = new System.Drawing.Size(509, 20);
 			this.input_birthday.TabIndex = 23;
@@ -128,7 +132,7 @@
 			this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.label12.AutoSize = true;
-			this.label12.Location = new System.Drawing.Point(28, 198);
+			this.label12.Location = new System.Drawing.Point(28, 226);
 			this.label12.MinimumSize = new System.Drawing.Size(139, 0);
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(139, 13);
@@ -187,7 +191,7 @@
 			// 
 			this.input_patronymic.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.input_patronymic.Location = new System.Drawing.Point(212, 158);
+			this.input_patronymic.Location = new System.Drawing.Point(212, 186);
 			this.input_patronymic.Name = "input_patronymic";
 			this.input_patronymic.Size = new System.Drawing.Size(509, 20);
 			this.input_patronymic.TabIndex = 17;
@@ -197,7 +201,7 @@
 			this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(28, 161);
+			this.label7.Location = new System.Drawing.Point(28, 189);
 			this.label7.MinimumSize = new System.Drawing.Size(139, 0);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(139, 13);
@@ -209,7 +213,7 @@
 			// 
 			this.input_name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.input_name.Location = new System.Drawing.Point(212, 123);
+			this.input_name.Location = new System.Drawing.Point(212, 151);
 			this.input_name.Name = "input_name";
 			this.input_name.Size = new System.Drawing.Size(509, 20);
 			this.input_name.TabIndex = 15;
@@ -219,7 +223,7 @@
 			this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(28, 126);
+			this.label8.Location = new System.Drawing.Point(28, 154);
 			this.label8.MinimumSize = new System.Drawing.Size(139, 0);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(139, 13);
@@ -231,7 +235,7 @@
 			// 
 			this.input_lastname.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.input_lastname.Location = new System.Drawing.Point(212, 88);
+			this.input_lastname.Location = new System.Drawing.Point(212, 116);
 			this.input_lastname.Name = "input_lastname";
 			this.input_lastname.Size = new System.Drawing.Size(509, 20);
 			this.input_lastname.TabIndex = 13;
@@ -241,7 +245,7 @@
 			this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.label9.AutoSize = true;
-			this.label9.Location = new System.Drawing.Point(28, 91);
+			this.label9.Location = new System.Drawing.Point(28, 119);
 			this.label9.MinimumSize = new System.Drawing.Size(139, 0);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(139, 13);
@@ -431,6 +435,28 @@
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
+			// label6
+			// 
+			this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.label6.AutoSize = true;
+			this.label6.Location = new System.Drawing.Point(28, 85);
+			this.label6.MinimumSize = new System.Drawing.Size(139, 0);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(139, 13);
+			this.label6.TabIndex = 24;
+			this.label6.Text = "Бюджетное обучение";
+			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// input_isBudged
+			// 
+			this.input_isBudged.AutoSize = true;
+			this.input_isBudged.Location = new System.Drawing.Point(212, 85);
+			this.input_isBudged.Name = "input_isBudged";
+			this.input_isBudged.Size = new System.Drawing.Size(15, 14);
+			this.input_isBudged.TabIndex = 25;
+			this.input_isBudged.UseVisualStyleBackColor = true;
+			// 
 			// AddRequest
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -484,5 +510,7 @@
 		private System.Windows.Forms.Label label13;
 		private System.Windows.Forms.DateTimePicker input_birthday;
 		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.CheckBox input_isBudged;
+		private System.Windows.Forms.Label label6;
 	}
 }

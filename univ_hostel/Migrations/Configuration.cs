@@ -1,4 +1,4 @@
-namespace univ_hostel.Migrations
+Ôªønamespace univ_hostel.Migrations
 {
 	using System;
 	using System.Collections.Generic;
@@ -7,52 +7,59 @@ namespace univ_hostel.Migrations
 	using System.Linq;
 	using univ_hostel.Models;
 
+	public class MigrateDBConfiguration : DbMigrationsConfiguration<DefaultDbContext>
+	{
+		protected override void Seed(DefaultDbContext context)
+		{
+			base.Seed(context);
+			Configuration._Seed(context);
+		}
+	}
+
 	internal sealed class Configuration : DbMigrationsConfiguration<univ_hostel.Models.DefaultDbContext>
 	{
 		public Configuration()
 		{
-			AutomaticMigrationsEnabled = false;
+			AutomaticMigrationsEnabled = true;
+			var inilializer = new MigrateDatabaseToLatestVersion<DefaultDbContext, MigrateDBConfiguration>();
+			Database.SetInitializer(inilializer);
 		}
 
-		protected override void Seed(univ_hostel.Models.DefaultDbContext context)
+		public static void _Seed(DefaultDbContext context)
 		{
-			//  This method will be called after migrating to the latest version.
-
-			//  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-			//  to avoid creating duplicate seed data.
 			if (context.Faculties.Count() == 0)
 			{
 				var tree = new Dictionary<string, Dictionary<string, string[]>>
 				{
-					{ "‘¿œœ",
+					{ "–§–ê–ü–ü",
 					new Dictionary<string, string[]>{
 						{ "0",
 						new string[]{
-							"¡œŒ-15-01",
-							"¡œŒÁ-15-01",
-							"ÃœŒ-18-01"
+							"–ë–ü–û-15-01",
+							"–ë–ü–û–ó-15-01",
+							"–ë–ü–û-18-01"
 						}
 						}
 					}
 					},
-					{ "‘““",
+					{ "–ì–ù–§",
 					new Dictionary<string, string[]>{
 						{ "1",
 						new string[]{
-							"¡—“-16-01",
-							"¡—“-17-01",
-							"¡—“-18-01"
+							"–ë–ì–ë-16-01",
+							"–ë–ì–ë-17-01",
+							"–ë–ì–ë-18-01"
 						}
 						}
 					}
 					},
-					{ "√Õ‘",
+					{ "–§–û–ù–î",
 					new Dictionary<string, string[]>{
 						{ "2",
 						new string[]{
-							"√√-18-01",
-							"√‘-17-01",
-							"¡√¡-15-01"
+							"–ë–ö–ü-18-01",
+							"–ë–ù–ò-18-01",
+							"–ú–î–£-17-01"
 						}
 						}
 					}
@@ -75,6 +82,15 @@ namespace univ_hostel.Migrations
 				}
 				context.SaveChanges();
 			}
+		}
+
+		protected override void Seed(DefaultDbContext context)
+		{
+			//  This method will be called after migrating to the latest version.
+
+			//  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+			//  to avoid creating duplicate seed data.
+			_Seed(context);
 		}
 	}
 }

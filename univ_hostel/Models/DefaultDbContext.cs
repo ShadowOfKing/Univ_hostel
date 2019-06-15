@@ -36,6 +36,7 @@ namespace univ_hostel.Models
 		public DefaultDbContext() : base(ContextName)
 		{
 			Init();
+			
 		}
 
 		protected override void OnModelCreating(DbModelBuilder builder)

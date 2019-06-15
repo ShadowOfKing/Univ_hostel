@@ -21,5 +21,6 @@ namespace univ_hostel.Models
 		public string PhoneNumber { get; set; }
 		public Group Group { get; set; }
 		public int GroupId { get; set; }
+		public bool IsBudget { get; set; }
 	}
 }
