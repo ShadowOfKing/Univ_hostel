@@ -20,6 +20,10 @@ namespace univ_hostel.Forms.Administrator
 		private readonly Models.Student _student;
         private readonly string templatefilename = @"C:\Users\ISKANDER\Desktop\lab\univ_hostel\D nayma zhilogo pom.docx";
         private readonly string templatefilename1 = @"C:\Users\ISKANDER\Desktop\lab\univ_hostel\D o vozmeshtenie zatrat za kom uslugi.docx";
+
+        private readonly string templatefilename2 = @"D:\Univ_hostel\univ_prov\DOGOVOR_NAJMA_ZhILOGO_POMESchENIYa_V_OBSchEZhITII_byudzhet.docx";
+        private readonly string templatefilename3 = @"D:\Univ_hostel\univ_prov\DOGOVOR_NAJMA_ZhILOGO_POMESchENIYa_V_OBSchEZhITII_kontrakt.docx";
+
         public ViewStudent(BaseForm parentForm, int studentId) : base(parentForm)
 		{
 			InitializeComponent();
@@ -95,43 +99,92 @@ namespace univ_hostel.Forms.Administrator
 
             var wordAPP = new Word.Application();
             wordAPP.Visible = false;
-            try
+            if (output_isBudged.Checked==true)
             {
-                var wordDocument = wordAPP.Documents.Open(templatefilename);
-                ReplaceWordStup("{lastname}", Lastname, wordDocument);
-                ReplaceWordStup("{name}", name, wordDocument);
-                ReplaceWordStup("{Patronymic}", Patronymic, wordDocument);
-                ReplaceWordStup("{PassportNumber}", PassportNumber, wordDocument);
-                ReplaceWordStup("{PassportSeria}", PassportSeria, wordDocument);
-                ReplaceWordStup("{Address}", Address, wordDocument);
-                ReplaceWordStup("{inn}", inn, wordDocument);
-                ReplaceWordStup("{lastname}", Lastname, wordDocument);
-                ReplaceWordStup("{name}", name, wordDocument);
-                ReplaceWordStup("{Patronymic}", Patronymic, wordDocument);
+                try
+                {
+                    var wordDocument = wordAPP.Documents.Open(templatefilename2);
+                    wordDocument.SaveAs(@"D:\отчеты\D_nayma_zhilogo_pom.docx");
+                    //wordAPP.Documents.Close();
 
-                wordDocument.SaveAs(@"D:\отчеты\D_nayma_zhilogo_pom.docx");
-                //wordAPP.Documents.Close();
+                    var wordDocument1 = wordAPP.Documents.Open(templatefilename1);
+                    for (int i = 0; i < 5; i++)
+                    {
+                        ReplaceWordStup("{lastname}", Lastname, wordDocument);
+                        ReplaceWordStup("{name}", name, wordDocument);
+                        ReplaceWordStup("{Patronymic}", Patronymic, wordDocument);
+                        ReplaceWordStup("{PassportNumber}", PassportNumber, wordDocument);
+                        ReplaceWordStup("{PassportSeria}", PassportSeria, wordDocument);
+                        ReplaceWordStup("{Address}", Address, wordDocument);
+                        ReplaceWordStup("{inn}", inn, wordDocument);
+                        ReplaceWordStup("{lastname}", Lastname, wordDocument);
+                        ReplaceWordStup("{name}", name, wordDocument);
+                        ReplaceWordStup("{Patronymic}", Patronymic, wordDocument);
 
-                var wordDocument1 = wordAPP.Documents.Open(templatefilename1);
-                ReplaceWordStup("{lastname}", Lastname, wordDocument1);
-                ReplaceWordStup("{name}", name, wordDocument1);
-                ReplaceWordStup("{Patronymic}", Patronymic, wordDocument1);
-                ReplaceWordStup("{PassportNumber}", PassportNumber, wordDocument1);
-                ReplaceWordStup("{PassportSeria}", PassportSeria, wordDocument1);
-                ReplaceWordStup("{Address}", Address, wordDocument1);
-                ReplaceWordStup("{inn}", inn, wordDocument1);
-                ReplaceWordStup("{lastname}", Lastname, wordDocument1);
-                ReplaceWordStup("{name}", name, wordDocument1);
-                ReplaceWordStup("{Patronymic}", Patronymic, wordDocument1);
-
-                wordDocument1.SaveAs(@"D:\отчеты\D_o_vozmeshtenie_zatrat_za_kom_uslugi.docx");
-                wordDocument.Close();
-                wordDocument1.Close();
+                        
+                        ReplaceWordStup("{lastname}", Lastname, wordDocument1);
+                        ReplaceWordStup("{name}", name, wordDocument1);
+                        ReplaceWordStup("{Patronymic}", Patronymic, wordDocument1);
+                        ReplaceWordStup("{PassportNumber}", PassportNumber, wordDocument1);
+                        ReplaceWordStup("{PassportSeria}", PassportSeria, wordDocument1);
+                        ReplaceWordStup("{Address}", Address, wordDocument1);
+                        ReplaceWordStup("{inn}", inn, wordDocument1);
+                        ReplaceWordStup("{lastname}", Lastname, wordDocument1);
+                        ReplaceWordStup("{name}", name, wordDocument1);
+                        ReplaceWordStup("{Patronymic}", Patronymic, wordDocument1);
+                    }
+                    wordDocument1.SaveAs(@"D:\отчеты\budjet_doc.docx");
+                    wordDocument.Close();
+                    wordDocument1.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                    Console.WriteLine("end");
+                }
             }
-            catch (Exception ex)
+            else
             {
-                Console.WriteLine(ex);
-                Console.WriteLine("end");
+                try
+                {
+                    var wordDocument = wordAPP.Documents.Open(templatefilename3);
+                    ReplaceWordStup("{lastname}", Lastname, wordDocument);
+                    ReplaceWordStup("{name}", name, wordDocument);
+                    ReplaceWordStup("{Patronymic}", Patronymic, wordDocument);
+                    ReplaceWordStup("{PassportNumber}", PassportNumber, wordDocument);
+                    ReplaceWordStup("{PassportSeria}", PassportSeria, wordDocument);
+                    ReplaceWordStup("{Address}", Address, wordDocument);
+                    ReplaceWordStup("{inn}", inn, wordDocument);
+                    ReplaceWordStup("{lastname}", Lastname, wordDocument);
+                    ReplaceWordStup("{name}", name, wordDocument);
+                    ReplaceWordStup("{Patronymic}", Patronymic, wordDocument);
+
+                    wordDocument.SaveAs(@"D:\отчеты\kontract_doc.docx");
+                    //wordAPP.Documents.Close();
+
+                    var wordDocument1 = wordAPP.Documents.Open(templatefilename1);
+                    for (int i = 0; i < 5; i++)
+                    {
+                        ReplaceWordStup("{lastname}", Lastname, wordDocument1);
+                        ReplaceWordStup("{name}", name, wordDocument1);
+                        ReplaceWordStup("{Patronymic}", Patronymic, wordDocument1);
+                        ReplaceWordStup("{PassportNumber}", PassportNumber, wordDocument1);
+                        ReplaceWordStup("{PassportSeria}", PassportSeria, wordDocument1);
+                        ReplaceWordStup("{Address}", Address, wordDocument1);
+                        ReplaceWordStup("{inn}", inn, wordDocument1);
+                        ReplaceWordStup("{lastname}", Lastname, wordDocument1);
+                        ReplaceWordStup("{name}", name, wordDocument1);
+                        ReplaceWordStup("{Patronymic}", Patronymic, wordDocument1);
+                    }
+                    wordDocument1.SaveAs(@"D:\отчеты\D_o_vozmeshtenie_zatrat_za_kom_uslugi.docx");
+                    wordDocument.Close();
+                    wordDocument1.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                    Console.WriteLine("end");
+                }
             }
             MessageBox.Show("Документ сформирован");
 
